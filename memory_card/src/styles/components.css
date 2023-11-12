@@ -1,0 +1,15 @@
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .image-container > div {
+    margin-right: 10px;
+  }
+.button{
+  background-color: black;
+  border: 1px solid purple;
+}
+  .button:hover{
+    cursor: pointer;
+  }
