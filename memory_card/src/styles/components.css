@@ -1,59 +1,71 @@
 body{
   margin: 0;
   padding: 0;
-  
+  background-color: rgb(68, 63, 63);
+  color: white;
 }
-
 .header {
-  text-align: center; 
-  margin-bottom: 20px; 
+  text-align: center;
+  font-size: 45px;
+  font-family: 'Oswald', sans-serif;
 }
-
+.header_2{
+  font-size: 30px;
+}
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
-
 .score{
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 50px;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
 }
-
 .image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .image-wrapper {
-    margin-right: 10px;
-    text-align: center; 
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 50px;
+}
+.image-wrapper {
+  text-align: center;
+}
 .button{
-  background-color: black;
-  border: 1px solid purple;
+  background-color: rgb(163, 158, 158);
+  border: 1px solid rgb(6, 182, 246);
+  border-radius: 15px;
+  overflow: hidden;
 }
-
+.button img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.button:hover img {
+  transform: scale(1.1);
+}
 .button:hover{
-    cursor: pointer;
+  cursor: pointer;
 }
-
 .image-name {
-  margin: 0; 
-  padding-top: 5px; 
+  margin: 0;
+  padding-top: 5px;
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
 }
-
 .footer {
-    margin-top: auto;
-    padding: 1rem;
-    background: rgb(20, 20, 20);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+  font-family: 'Roboto Mono', monospace;
+  margin-top: auto;
+  padding: 1rem;
+  background: rgb(1, 1, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
 }

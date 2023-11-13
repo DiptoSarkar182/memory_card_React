@@ -28,126 +28,127 @@ import Heimerdinger from '../assets/Heimerdinger_Render.webp';
 import Illaoi from '../assets/Illaoi_Render.webp';
 import Irelia from '../assets/Irelia_Render.webp';
 import Ivern from '../assets/Ivern_Render.webp';
+import { v4 as uuid } from 'uuid';
 
 
 export const images = [{
-    id: 0,
+    id: uuid(),
     name: 'Aatrox',
     src: Aatrox
 }, {
-    id: 1,
+    id: uuid(),
     name: 'Ahri',
     src: Ahri
 }, {
-    id: 2,
+    id: uuid(),
     name: 'Akali',
     src: Akali
 }, {
-    id: 3,
+    id: uuid(),
     name: 'Akshan',
     src: Akshan
 }, {
-    id: 4,
+    id: uuid(),
     name: 'Alister',
     src: Alister
 }, {
-    id: 5,
+    id: uuid(),
     name: 'Bard',
     src: Bard
 }, {
-    id: 6,
+    id: uuid(),
     name: 'BelVeth',
     src: BelVeth
 }, {
-    id: 7,
+    id: uuid(),
     name: 'Blitzcrank',
     src: Blitzcrank
 }, {
-    id: 8,
+    id: uuid(),
     name: 'Brand',
     src: Brand
 }, {
-    id: 9,
+    id: uuid(),
     name: 'Braum',
     src: Braum
 }, {
-    id: 10,
+    id: uuid(),
     name: 'Caitlyn',
     src: Caitlyn
 }, {
-    id: 11,
+    id: uuid(),
     name: 'Camille',
     src: Camile
 }, {
-    id: 12,
+    id: uuid(),
     name: 'Cassiopeia',
     src: Cassiopeia
 }, {
-    id: 13,
+    id: uuid(),
     name: 'ChoGath',
     src: ChoGath
 }, {
-    id: 14,
+    id: uuid(),
     name: 'Corki',
     src: Corki
 }, {
-    id: 15,
+    id: uuid(),
     name: 'Darius',
     src: Darius
 }, {
-    id: 16,
+    id: uuid(),
     name: 'Diana',
     src: Diana
 }, {
-    id: 17,
-    name: 'Dr.Mundo',
+    id: uuid(),
+    name: 'Dr. Mundo',
     src: Dr_Mundo
 }, {
-    id: 18,
+    id: uuid(),
     name: 'Draven',
     src: Draven
 }, {
-    id: 19,
+    id: uuid(),
     name: 'Ekko',
     src: Ekko
 }, {
-    id: 20,
+    id: uuid(),
     name: 'Fiora',
     src: Fiora
 }, {
-    id: 21,
+    id: uuid(),
     name: 'Fizz',
     src: Fizz
 }, {
-    id: 22,
+    id: uuid(),
     name: 'Galio',
     src: Galio
 }, {
-    id: 23,
+    id: uuid(),
     name: 'Gangplank',
     src: GangPlank
 }, {
-    id: 24,
+    id: uuid(),
     name: 'Garen',
     src: Garen
 }, {
-    id: 25,
+    id: uuid(),
     name: 'Hecarim',
     src: Hecarim
 }, {
-    id: 26,
+    id: uuid(),
     name: 'Heimerdinger',
     src: Heimerdinger
 }, {
-    id: 27,
+    id: uuid(),
     name: 'Illaoi',
     src: Illaoi
 }, {
-    id: 28,
+    id: uuid(),
     name: 'Irelia',
     src: Irelia
 }, {
-    id: 29,
+    id: uuid(),
     name: 'Ivern',
     src: Ivern
 }
