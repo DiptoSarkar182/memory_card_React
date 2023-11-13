@@ -13,31 +13,37 @@ export default function Game(){
     const [clickedImageID, setClickedImageID] = useState('');
     const [storeClickedImageID, setStoreClickedImageID] = useState([]);
 
-    useEffect(() => {
-        const generateRandomValues = () => {
-          const newValues = [];
-          while (newValues.length < 10) {
-            const randomValue = Math.floor(Math.random() * totalImages);
-    
-            if (!newValues.includes(randomValue)) {
+    const generateRandomValues = () => {
+      const newValues = [];
+      while (newValues.length < 10) {
+          const randomValue = Math.floor(Math.random() * totalImages);
+          if (!newValues.includes(randomValue)) {
               newValues.push(randomValue);
-            }
           }
-          setUniqueRandomValues(newValues);
-        };
-    
-        generateRandomValues();
-      }, [clickedImageID]);
+      }
+      setUniqueRandomValues(newValues);
+  };
 
-      useEffect(() => {
+    useEffect(() => {
+        generateRandomValues();
+    }, [clickedImageID]);
+
+    useEffect(() => {
         countScore();
       }, [storeClickedImageID]);
 
-      useEffect(() => {
+    useEffect(() => {
         if (currentScore > bestScore) {
             setBestScore(currentScore);
         }
     }, [currentScore]);
+
+    useEffect(() => {
+      if (bestScore === 30) {
+          alert("You won the game!");
+          setCurrentScore(0); 
+      }
+  }, [bestScore]);
     
 
     function countScore(){
@@ -51,26 +57,27 @@ export default function Game(){
 
     function handleOnClick(getImageID){
       if (getImageID !== undefined) {
-          setClickedImageID(getImageID);
-          setStoreClickedImageID(prevArray => {
-              const newArray = [...prevArray, getImageID];
-              if (newArray.length === 1 || !newArray.slice(0, -1).includes(getImageID)) {
-                  setCurrentScore(currentScore + 1);
-              }
-              return newArray;
-          });
+          if (storeClickedImageID.includes(getImageID)) {
+              setCurrentScore(0);
+              setStoreClickedImageID([]);
+          } else {
+              setClickedImageID(getImageID);
+              setStoreClickedImageID(prevArray => [...prevArray, getImageID]);
+              setCurrentScore(prevScore => prevScore + 1);
+          }
       }
+      generateRandomValues();
   }
 
     return (
-      <div>
+      <div className="parentContainer">
         <div className="score">
           <div className='current'>Current Score: {currentScore}</div>
           <div className='best'>Best Score: {bestScore}</div>
         </div>
           <div className="image-container">
             {uniqueRandomValues.map((value, index) => (
-                <div key={index}>
+                <div key={index} className="image-wrapper">
                     <button className="button"
                     onClick={() => {handleOnClick(images[value].id)}}>
                     <img
@@ -79,7 +86,7 @@ export default function Game(){
                         style={{ width: '200px', height: '250px' }}
                     />
                     </button>
-                    <p>{images[value].name}</p>
+                    <p className="image-name">{images[value].name}</p>
                 </div>
             ))}
           </div>

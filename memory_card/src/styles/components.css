@@ -1,15 +1,59 @@
+body{
+  margin: 0;
+  padding: 0;
+  
+}
+
+.header {
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.score{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
 .image-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .image-wrapper {
+    margin-right: 10px;
+    text-align: center; 
   }
   
-  .image-container > div {
-    margin-right: 10px;
-  }
 .button{
   background-color: black;
   border: 1px solid purple;
 }
-  .button:hover{
+
+.button:hover{
     cursor: pointer;
-  }
+}
+
+.image-name {
+  margin: 0; 
+  padding-top: 5px; 
+}
+
+.footer {
+    margin-top: auto;
+    padding: 1rem;
+    background: rgb(20, 20, 20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
