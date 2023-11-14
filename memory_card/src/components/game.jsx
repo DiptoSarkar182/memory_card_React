@@ -26,10 +26,6 @@ export default function Game() {
   }, [clickedImageID]);
 
   useEffect(() => {
-    countScore();
-  }, [storeClickedImageID]);
-
-  useEffect(() => {
     if (currentScore > bestScore) {
       setBestScore(currentScore);
     }
@@ -43,13 +39,6 @@ export default function Game() {
     }
   }, [currentScore]);
 
-  function countScore() {
-    if (storeClickedImageID.length === 0) {
-      setCurrentScore(currentScore + 0);
-    } else if (!storeClickedImageID.includes(clickedImageID)) {
-      setCurrentScore(currentScore + 1);
-    }
-  }
 
   function handleOnClick(getImageID) {
     if (getImageID !== undefined) {
