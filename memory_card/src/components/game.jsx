@@ -23,7 +23,7 @@ export default function Game() {
 
   useEffect(() => {
     generateRandomValues();
-  }, [clickedImageID]);
+  }, []);
 
   useEffect(() => {
     if (currentScore > bestScore) {
