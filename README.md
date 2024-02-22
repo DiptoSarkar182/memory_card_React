@@ -12,7 +12,7 @@ All the images of League Of Legends Champions were taken from <a href="https://l
 ## Installation
 
 1. Clone the repository
-2. Install dependencies
+2. Go to the root folder (memory_card) of the project and run the following command to install the dependencies
    ```sh
    npm install
    ```
